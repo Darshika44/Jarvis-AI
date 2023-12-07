@@ -131,10 +131,6 @@ if __name__ == "__main__":
 
         elif "what's your name" in query or "what is your name" in query:
             speak("My friends call me, Jarvis")
-
-        elif "Good Morning" or "Good afternoon" or "Good evening" in query:
-            speak(query)
-            speak("How are you Mam")
             
         elif "will you be my girlfriend" in query or "will you be my boyfriend" in query:
             speak("I'm not sure about, may be you should give me some time")
