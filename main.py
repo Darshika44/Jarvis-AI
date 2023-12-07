@@ -32,8 +32,8 @@ def greetMe():
     else:
         speak("Good Evening Mam !")
 
-    speak("I am Jarvis A I your virtual assistant")
-    speak("How can I help you Mam")
+    # speak("I am Jarvis A I your virtual assistant")
+    speak("Please tell me, How can I help you ?")
 
 
 def takeCommand():
@@ -100,12 +100,47 @@ if __name__ == "__main__":
         elif "camera" in query or "take a photo" in query:
             ec.capture(0, "Jarvis Camera ", "img.jpg")
 
+        # conversation
+        elif "hello jarvis" in query:
+            speak("Hello Mam, how are you ?")
+
         elif 'how are you' in query:
             speak("I am fine, Thank you")
             speak("How are you, Mam")
 
-        elif 'fine' in query or 'good' in query:
+        elif 'I am fine' in query or 'good' in query:
             speak("It's good to know that you are fine")
+
+        elif "thank you" in query:
+            speak("you are welcome, Mam")
+
+        elif "who i am" in query:
+            speak("If you talk then definitely your human.")
+
+        elif "why you came to world" in query:
+            speak("Thanks to Darshika. further It's a secret")
+
+        elif 'is love' in query:
+            speak("It is 7th sense that destroy all other senses")
+
+        elif "who are you" in query:
+            speak("I am a virtual assistant created by Darshika")
+
+        elif "who made you" in query or "who created you" in query:
+            speak("I have been created by Darshika.")
+
+        elif "what's your name" in query or "what is your name" in query:
+            speak("My friends call me, Jarvis")
+
+        elif "Good Morning" or "Good afternoon" or "Good evening" in query:
+            speak(query)
+            speak("How are you Mam")
+            
+        elif "will you be my girlfriend" in query or "will you be my boyfriend" in query:
+            speak("I'm not sure about, may be you should give me some time")
+
+        elif "i love you" in query:
+            speak("It's hard to understand")
 
         elif 'joke' in query:
             speak(pyjokes.get_joke())
@@ -116,8 +151,12 @@ if __name__ == "__main__":
         #     time.sleep(a)
         #     print(a)
 
-        elif "jarvis" in query:
-            speak("Jarvis in your service Mam")
+        elif "wake up" in query:
+            greetMe()
+
+        elif "go to sleep" in query:
+            speak("Ok Mam, you can call me anytime")
+            break
 
         elif 'exit' in query:
             speak("Thanks for giving me your time")
